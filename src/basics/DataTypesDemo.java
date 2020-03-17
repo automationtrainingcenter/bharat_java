@@ -181,6 +181,31 @@ public class DataTypesDemo {
         double dp = dw.doubleValue();
         System.out.println(dp);
 
+
+        // primitive to reference (string)
+        int ipr = 1234;
+        String i2s = Integer.toString(ipr);
+        System.out.println(ipr+10);
+        System.out.println(i2s+10);
+
+
+        double dpr = 9.8;
+        String d2s = Double.toString(dpr);
+        System.out.println(dpr+10); // 19.8
+        System.out.println(d2s+10); // 9.810
+
+        // reference (String) to primitive
+        String si = "8976";
+        int s2i = Integer.parseInt(si);
+        System.out.println(si+10);
+        System.out.println(s2i+10);
+
+
+        String sf = "123.44";
+        float s2f = Float.parseFloat(sf);
+        System.out.println(sf+10);
+        System.out.println(s2f+10);
+
         
 
     }
