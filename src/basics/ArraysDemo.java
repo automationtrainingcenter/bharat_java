@@ -106,7 +106,7 @@ public class ArraysDemo {
         char[] vowels = {'a', 'e', 'i', 'o', 'u'};
 
         // find the number of items in vowels array
-        System.out.println("number of items in vowels array "+vowels.length);
+        System.out.println("number of items in vowels array " + vowels.length);
 
         // retrieving data from the vowels array
         System.out.println(vowels[0]);
@@ -132,15 +132,56 @@ public class ArraysDemo {
         System.out.print(m1[0][0] + " ");
         System.out.print(m1[0][1] + "\n");
         // Second column
-        System.out.print(m1[1][0]+" ");
-        System.out.print(m1[1][1]+"\n");
+        System.out.print(m1[1][0] + " ");
+        System.out.print(m1[1][1] + "\n");
 
+        // initialize a 2D array
+        int[][] m2 = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
 
+        // find the number of rows (1D arrays) in m2 array
+        System.out.println("number of rows or 1D arrays in m2 array is " + m2.length); // 3
+        // find the number of columns (items) in every row (1D array) of m2
+        System.out.println("number of items in first row or 1D array is " + m2[0].length); // 3
+        System.out.println("number of items in second row or 1D array is " + m2[1].length); // 3
+        System.out.println("number of items in third row or 1D array is " + m2[2].length); // 3
 
+        // retrieve the data from the m2 array
+        // First row
+        System.out.print(m2[0][0] + " "); // first column
+        System.out.print(m2[0][1] + " "); // second column
+        System.out.print(m2[0][2] + "\n"); // Third column
+        // second row
+        System.out.print(m2[1][0] + " "); // first column
+        System.out.print(m2[1][1] + " "); // second column
+        System.out.print(m2[1][2] + "\n"); // third column
+        // third row
+        System.out.print(m2[2][0] + " "); // first column
+        System.out.print(m2[2][1] + " "); // second column
+        System.out.print(m2[2][2] + "\n"); // third column
 
+        // 2D array with unequal numbers columns in every row
+        int[][] m3 = {{1, 2}, {3, 4, 5, 6}, {7, 8, 9}};
 
+        // find the number of rows (1D arrays) in m3 array
+        System.out.println("number of rows or 1D arrays in m3 array is " + m3.length); // 3
+        // find the number of columns (items) in every row (1D array) of m3
+        System.out.println("number of items in first row or 1D array is " + m3[0].length); // 2
+        System.out.println("number of items in second row or 1D array is " + m3[1].length); // 4
+        System.out.println("number of items in third row or 1D array is " + m3[2].length); // 3
 
-
+        // retrieve the data from the m2 array
+        // First row
+        System.out.print(m3[0][0] + " "); // first column
+        System.out.print(m3[0][1] + "\n"); // second column
+        // second row
+        System.out.print(m3[1][0] + " "); // first column
+        System.out.print(m3[1][1] + " "); // second column
+        System.out.print(m3[1][2] + " "); // third column
+        System.out.print(m3[1][3] + "\n"); // fourth column
+        // third row
+        System.out.print(m3[2][0] + " "); // first column
+        System.out.print(m3[2][1] + " "); // second column
+        System.out.print(m3[2][2] + "\n"); // third column
 
     }
 
