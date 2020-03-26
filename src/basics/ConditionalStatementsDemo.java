@@ -68,7 +68,7 @@ package basics;
  *
  * ************ switch case: it will work based on value ************
  * switch(Value){
- * 		case value1;
+ * 		case value1:
  * 			statements;
  * 			break;
  * 		case value2:
@@ -86,6 +86,8 @@ package basics;
  *
  *
  */
+
+import java.util.Scanner;
 
 public class ConditionalStatementsDemo {
 
@@ -160,7 +162,101 @@ public class ConditionalStatementsDemo {
         }
 
 
-    }
+        /*
+        Switch case is almost same as else if ladder
+        switch case only compares equality of the operands.
+         */
+        // verify a character is vowel or not
+        char ch = 'g';
+        switch (ch){
+            case 'a':
+                System.out.println("a is vowel");
+                break;
+            case 'e':
+                System.out.println("e is vowel");
+                break;
+            case 'i':
+                System.out.println("i is vowel");
+                break;
+            case 'o':
+                System.out.println("o is vowel");
+                break;
+            case 'u':
+                System.out.println("u is vowel");
+                break;
+            default:
+                System.out.println("character is not vowel");
+        }
 
+        // facebook account
+        // enter username, enter password and click on login button
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter facebook username");
+        String username = sc.next();
+        System.out.println("enter facebook password");
+        String password = sc.next();
+        if(username.equals("sunshine") && password.equals("selenium")){
+            System.out.println("welcome user");
+        }else{
+            System.out.println("incorrect credentials");
+        }
+
+
+        // gmail account
+        // enter username, click next, if username is valid then it will display
+        // enter password and click on login
+        System.out.println("enter gmail username");
+        String guser = sc.next();
+        if(guser.equalsIgnoreCase("sunshine")){
+            System.out.println("enter gmail password");
+            String gpass = sc.next();
+            if(gpass.equals("selenium")){
+                System.out.println("Welcome "+guser);
+            }else{
+                System.out.println("invalid password");
+            }
+        }else{
+            System.out.println("Invalid username");
+        }
+
+
+        // open a browser based on browser name
+        System.out.println("enter browser name");
+        String browserName = sc.next();
+        switch (browserName){
+            case "chrome":
+                System.out.println("launching chrome browser");
+                break;
+            case "firefox":
+                System.out.println("launching firefox browser");
+                break;
+            case "opera":
+                System.out.println("launching opera browser");
+                break;
+            case "ie":
+                System.out.println("launching ie browser");
+                break;
+            case "edge":
+                System.out.println("launching edge browser");
+                break;
+            default:
+                System.out.println("invalid browser name");
+        }
+
+        //  verify OS of our machine
+//        String osname = System.getProperty("os.name").toLowerCase();
+        System.out.println("enter os name");
+        String osname = sc.next();
+        if(osname.contains("mac")){
+            System.out.println("OS is mac");
+        }else if (osname.contains("windows")){
+            System.out.println("OS is windows");
+        }else if (osname.contains("linux")){
+            System.out.println("OS is linux");
+        }else{
+            System.out.println("invalid os name");
+        }
+
+    }
 
 }
