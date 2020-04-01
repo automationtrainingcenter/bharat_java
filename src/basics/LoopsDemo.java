@@ -15,7 +15,40 @@ while, do while and for loops contains mainly 3 parts
 2. condition or expression
 3. increment or decrement
 
+
+1. while loop
+
+initialize a variable
+while(condition or expression){
+    statements to repeat;
+    increment or decrement initialized variable;
+}
+
+2. do while loop
+
+initialize a variable
+do{
+    statements to repeat;
+    increment or decrement initialized variable;
+} while(condition or expression);
+
+
+3. for loop
+
+for(initialization; condition or expression; increment or decrement){
+    statements to repeat;
+}
+
+
+4. for each loop: retrieve the data from an array (collection)
+for(array_data_type var_name : array_var_name){
+    statements to repeat;
+}
+
+
  */
+
+import java.util.Scanner;
 
 public class LoopsDemo {
 
@@ -63,8 +96,41 @@ public class LoopsDemo {
             System.out.println(number);
         }
 
-        // Note: The minimum number of iterations for the for each loop 0
+        // Note: The minimum number of iterations for the for each loop is 0
 
+        // read a string from the console until we enter exit
+        Scanner sc = new Scanner(System.in);
+
+//        System.out.println("enter some string");
+//        String input = sc.next();
+//        while(!input.equalsIgnoreCase("exit")){
+//            System.out.println("input string is :: "+input);
+//            System.out.println("enter another string");
+//            input = sc.next();
+//        }
+
+        String input = "";
+        do{
+            System.out.println("input string is :: "+input);
+            System.out.println("enter some string");
+            input = sc.next();
+        } while(!input.equalsIgnoreCase("exit"));
+
+        // reverse the given string
+        // verify a string is palindrome or not
+        String data = "madam";
+        String revData = "";
+        for(int s = data.length() -1; s >= 0 ; s--){
+            revData = revData + data.charAt(s);
+        }
+        System.out.println(revData);
+
+        // check palindrome
+        if(data.equalsIgnoreCase(revData)){
+            System.out.println("given string is palindrome");
+        }else{
+            System.out.println("given string is not a palindrome");
+        }
 
 
 

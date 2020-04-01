@@ -95,12 +95,17 @@ public class ArraysDemo {
         marks[5] = 23;
 
         // retrieve the data from marks array
-        System.out.println(marks[0]);
-        System.out.println(marks[1]);
-        System.out.println(marks[2]);
-        System.out.println(marks[3]);
-        System.out.println(marks[4]);
-        System.out.println(marks[5]);
+//        System.out.println(marks[0]);
+//        System.out.println(marks[1]);
+//        System.out.println(marks[2]);
+//        System.out.println(marks[3]);
+//        System.out.println(marks[4]);
+//        System.out.println(marks[5]);
+        // retrieve the data from marks array using normal for loop
+        System.out.println("Retrieving marks using normal for loop");
+        for(int i = 0; i < marks.length; i++){
+            System.out.println(marks[i]);
+        }
 
         // initialize a 1D array
         char[] vowels = {'a', 'e', 'i', 'o', 'u'};
@@ -109,11 +114,16 @@ public class ArraysDemo {
         System.out.println("number of items in vowels array " + vowels.length);
 
         // retrieving data from the vowels array
-        System.out.println(vowels[0]);
-        System.out.println(vowels[1]);
-        System.out.println(vowels[2]);
-        System.out.println(vowels[3]);
-        System.out.println(vowels[4]);
+//        System.out.println(vowels[0]);
+//        System.out.println(vowels[1]);
+//        System.out.println(vowels[2]);
+//        System.out.println(vowels[3]);
+//        System.out.println(vowels[4]);
+        // retrieving data from the vowels array using for each loop
+        System.out.println("Retrieving vowels using for each loop");
+        for(char vowel : vowels){
+            System.out.println(vowel);
+        }
 
 
         // 2D array declaration
