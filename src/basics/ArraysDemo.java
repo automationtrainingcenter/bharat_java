@@ -103,7 +103,7 @@ public class ArraysDemo {
 //        System.out.println(marks[5]);
         // retrieve the data from marks array using normal for loop
         System.out.println("Retrieving marks using normal for loop");
-        for(int i = 0; i < marks.length; i++){
+        for (int i = 0; i < marks.length; i++) {
             System.out.println(marks[i]);
         }
 
@@ -121,7 +121,7 @@ public class ArraysDemo {
 //        System.out.println(vowels[4]);
         // retrieving data from the vowels array using for each loop
         System.out.println("Retrieving vowels using for each loop");
-        for(char vowel : vowels){
+        for (char vowel : vowels) {
             System.out.println(vowel);
         }
 
@@ -139,11 +139,28 @@ public class ArraysDemo {
 
         // retrieve the data from m1 array
         // First row
-        System.out.print(m1[0][0] + " ");
-        System.out.print(m1[0][1] + "\n");
-        // Second column
-        System.out.print(m1[1][0] + " ");
-        System.out.print(m1[1][1] + "\n");
+//        System.out.print(m1[0][0] + " ");
+//        System.out.print(m1[0][1] + "\n");
+//        // Second column
+//        System.out.print(m1[1][0] + " ");
+//        System.out.print(m1[1][1] + "\n");
+
+        System.out.println("*****************************************");
+//        for (int i = 0; i < m1.length; i++) {
+//            // row loop
+//            for (int j = 0; j < m1[i].length; j++) {
+//                // columns
+//                System.out.print(m1[i][j] + " ");
+//            }
+//            System.out.println();
+//        }
+
+        for (int[] row : m1) {
+            for (int column : row) {
+                System.out.print(column + "\t");
+            }
+            System.out.println();
+        }
 
         // initialize a 2D array
         int[][] m2 = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
@@ -157,17 +174,33 @@ public class ArraysDemo {
 
         // retrieve the data from the m2 array
         // First row
-        System.out.print(m2[0][0] + " "); // first column
-        System.out.print(m2[0][1] + " "); // second column
-        System.out.print(m2[0][2] + "\n"); // Third column
-        // second row
-        System.out.print(m2[1][0] + " "); // first column
-        System.out.print(m2[1][1] + " "); // second column
-        System.out.print(m2[1][2] + "\n"); // third column
-        // third row
-        System.out.print(m2[2][0] + " "); // first column
-        System.out.print(m2[2][1] + " "); // second column
-        System.out.print(m2[2][2] + "\n"); // third column
+//        System.out.print(m2[0][0] + " "); // first column
+//        System.out.print(m2[0][1] + " "); // second column
+//        System.out.print(m2[0][2] + "\n"); // Third column
+//        // second row
+//        System.out.print(m2[1][0] + " "); // first column
+//        System.out.print(m2[1][1] + " "); // second column
+//        System.out.print(m2[1][2] + "\n"); // third column
+//        // third row
+//        System.out.print(m2[2][0] + " "); // first column
+//        System.out.print(m2[2][1] + " "); // second column
+//        System.out.print(m2[2][2] + "\n"); // third column
+
+//        for (int i = 0; i < m2.length; i++) {
+//            // rows loop
+//            for (int j = 0; j < m2[i].length; j++) {
+//                // columns loop
+//                System.out.print(m2[i][j] + " ");
+//            }
+//            System.out.println();
+//        }
+
+        for (int[] row : m2) {
+            for(int column : row){
+                System.out.print(column+"\t");
+            }
+            System.out.println();
+        }
 
         // 2D array with unequal numbers columns in every row
         int[][] m3 = {{1, 2}, {3, 4, 5, 6}, {7, 8, 9}};
@@ -181,18 +214,32 @@ public class ArraysDemo {
 
         // retrieve the data from the m2 array
         // First row
-        System.out.print(m3[0][0] + " "); // first column
-        System.out.print(m3[0][1] + "\n"); // second column
-        // second row
-        System.out.print(m3[1][0] + " "); // first column
-        System.out.print(m3[1][1] + " "); // second column
-        System.out.print(m3[1][2] + " "); // third column
-        System.out.print(m3[1][3] + "\n"); // fourth column
-        // third row
-        System.out.print(m3[2][0] + " "); // first column
-        System.out.print(m3[2][1] + " "); // second column
-        System.out.print(m3[2][2] + "\n"); // third column
+//        System.out.print(m3[0][0] + " "); // first column
+//        System.out.print(m3[0][1] + "\n"); // second column
+//        // second row
+//        System.out.print(m3[1][0] + " "); // first column
+//        System.out.print(m3[1][1] + " "); // second column
+//        System.out.print(m3[1][2] + " "); // third column
+//        System.out.print(m3[1][3] + "\n"); // fourth column
+//        // third row
+//        System.out.print(m3[2][0] + " "); // first column
+//        System.out.print(m3[2][1] + " "); // second column
+//        System.out.print(m3[2][2] + "\n"); // third column
+//        for (int i = 0; i < m3.length; i++) {
+//            // rows loop
+//            for (int j = 0; j < m3[i].length; j++) {
+//                // columns loop
+//                System.out.print(m3[i][j] + " ");
+//            }
+//            System.out.println();
+//        }
 
+        for(int[] row : m3){ // rows (1D arrays) in m3 array
+            for(int column : row){ // columns (items) in every row (1D array)
+                System.out.print(column+"\t");
+            }
+            System.out.println();
+        }
     }
 
 
