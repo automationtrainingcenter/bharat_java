@@ -4,7 +4,7 @@ public class Programs {
     // find out given number is odd or even
 
 
-    // divisible of 3
+    // verify given number is divisible of 3
 
     // copy the data of an array into another array
 
