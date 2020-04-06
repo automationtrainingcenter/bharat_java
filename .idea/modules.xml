@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://E://Selinium Class/../../Selinium class/bharat_java/java_concepts.iml" filepath="E://Selinium Class/../../Selinium class/bharat_java/java_concepts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bharat_java.iml" filepath="$PROJECT_DIR$/bharat_java.iml" />
     </modules>
   </component>
 </project>

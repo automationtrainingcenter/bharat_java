@@ -1,5 +1,5 @@
 out/
 .DS_Store
 /bin/
-/.classpath
-/.project
+.classpath
+.project
