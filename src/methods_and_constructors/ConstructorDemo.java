@@ -24,11 +24,18 @@ package methods_and_constructors;
     one default constructor while creating .class file. If in case java class contains parameterized
     constructor then java compiler will not create default constructor for us.
 
-    we can write as many parametrized constructors as we want in a class which is known as Constructor overloading
+    we can write as many parametrized constructors as we want in a class which is known as "Constructor overloading"
     to create a overloaded constructor we can change either
     number of parameters or
     type of parameters or
     sequence of parameters
+
+    "this" is a keyword in java which will represent current class instance.
+    "this" keyword is used to differentiate instance variables with arguments of a constructor
+    and also used to call a constructor from another constructor.
+
+    Note: Calling a constructor from another constructor is known as "constructor chaining".
+    Note: Calling a constructor from another constructor must be first statement with in the constructor
 
  */
 public class ConstructorDemo {
@@ -41,7 +48,7 @@ public class ConstructorDemo {
     String panNum;
 
     // default constructor
-    public ConstructorDemo(){
+    public ConstructorDemo() {
         id = 100;
         name = "sunshine";
         salary = 30000.0;
@@ -49,37 +56,34 @@ public class ConstructorDemo {
         panNum = "ava1199q";
     }
 
+    // change in number of arguments
+    public ConstructorDemo(int id, String name, double salary) {
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+    }
+
+    // change in number of arguments
+    public ConstructorDemo(int id, String name, double salary, long aadhar) {
+        this(id, name, salary);
+        this.aadhar = aadhar;
+    }
+
+    // change in type of arguments from above constructor to this constructor
+    public ConstructorDemo(int id, String name, double salary, String panNum) {
+        this(id, name, salary);
+        this.panNum = panNum;
+    }
+
     // parametrized constructor
-    public ConstructorDemo(int i, String n, double s, long a, String pn){
-        id = i;
-        name = n;
-        salary = s;
-        aadhar = a;
-        panNum = pn;
+    public ConstructorDemo(int id, String name, double salary, long aadhar, String panNum) {
+        this(id, name, salary, aadhar);
+        this.panNum = panNum;
     }
 
-    public ConstructorDemo(int i, String n, double s){
-        id = i;
-        name = n;
-        salary = s;
-    }
 
-    public ConstructorDemo(int i, String n, double s, long a){
-        id = i;
-        name = n;
-        salary = s;
-        aadhar = a;
-    }
-
-    public ConstructorDemo(int i, String n, double s, String pn){
-        id = i;
-        name = n;
-        salary = s;
-        panNum = pn;
-    }
-
-    public void display(){
-        System.out.println("id = "+id+" name = "+name+" salary = "+salary+" aadhar num = "+aadhar+" pan num = "+panNum);
+    public void display() {
+        System.out.println("id = " + id + " name = " + name + " salary = " + salary + " aadhar num = " + aadhar + " pan num = " + panNum);
     }
 
 
@@ -104,7 +108,6 @@ public class ConstructorDemo {
         ConstructorDemo obj5 = new ConstructorDemo(104, "rakesh", 37000.00, "tak3214j");
         obj5.display();
     }
-
 
 
 }
