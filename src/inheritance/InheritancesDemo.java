@@ -116,7 +116,7 @@ public class InheritancesDemo {
         c2Obj.methodOne(); // Parent
 
 
-        
+
 
 
 
