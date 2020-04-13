@@ -21,4 +21,27 @@ package polymorphism;
 
 public class PolymorphismDemo {
 
+    public static void main(String[] args) {
+        // create an object of CompileTimePolyDemo class
+        CompileTimePolyDemo obj = new CompileTimePolyDemo();
+        obj.methodOne(10, 20); // 30
+        obj.methodOne(10, "java"); // 10java
+        obj.methodOne("surya", 10, 20); // surya1020
+        obj.methodOne("java", 25); // java25
+
+
+        // create an object of RunTimePolyParent
+        RunTimePolyParent rpObj = new RunTimePolyParent();
+        rpObj.methodOne("10", 20); // 1020
+
+        // create an object of RunTimePolyChild
+        RunTimePolyChild rcObj = new RunTimePolyChild();
+        rcObj.methodOne("10", 20); // 30
+
+        // create an object to child class but giving object reference to the parent class
+        RunTimePolyParent rpcObj = new RunTimePolyChild();
+        rpcObj.methodOne("10", 20); // 30
+
+    }
+
 }
