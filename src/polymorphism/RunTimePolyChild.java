@@ -11,7 +11,6 @@ public class RunTimePolyChild extends RunTimePolyParent{
     public void methodOne(String a, int b){
         int ia = Integer.parseInt(a);
         System.out.println(ia+b);
-
     }
 
 }
