@@ -20,20 +20,52 @@ declaration and it does not contains any method definition.
 2. Interfaces
     Interface is like class which contains abstract methods only.
     Note: To declare an interface we have to use interface keyword not class keyword
-    access_modifier interface interface_name{ ... }
+    access_modifier interface interface_name{ ... }. We have to create a class which will
+    implement all the abstract methods of the interface.
+
+    public class ImplClass implements Interface{ }
+
+    class "implements" interface, class can not "extends" interface
 
     the level of abstraction using interfaces is always 100%
 
 
 Note: We can not create an object of an abstract class or an interface.
 
+Multiple inheritance is not possible in Java using classes, but we can achieve using interfaces.
+
+
 */
 
 public class AbstractionDemo {
     public static void main(String[] args) {
+        // abstract class
         AbstractClassDemo obj = new AbstractClassChild();
         obj.methodOne();
         obj.methodTwo();
+
+        // interface
+        InterfaceDemo iObj = new InterfaceImpl();
+        iObj.methodOne();
+        iObj.methodTwo();
+
+        // multiple inheritance using interfaces
+        // single class implementing multiple interfaces
+        InterfaceOne i1Obj = new MultipleInterfaceImpl();
+        i1Obj.methodOne();
+        i1Obj.method();
+
+        // Typecast InterfaceOne object reference to the InterfaceTwo object reference
+        // so that we can call InterfaceTwo methods
+        /*
+        Note: we have to Typecast One interface object reference to the another interface object
+        reference if and only if both the interfaces are implemented same class.
+         */
+//        InterfaceTwo i2Obj = (InterfaceTwo) i1Obj;
+//        i2Obj.methodTwo();
+        ((InterfaceTwo) i1Obj).methodTwo();
+
+        
 
     }
 }
