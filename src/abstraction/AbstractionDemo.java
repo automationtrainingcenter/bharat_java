@@ -34,6 +34,22 @@ Note: We can not create an object of an abstract class or an interface.
 
 Multiple inheritance is not possible in Java using classes, but we can achieve using interfaces.
 
+Java 8 Interfaces:
+From Java8 onwards interfaces allows concrete methods i.e. methods with definitions
+These methods are either static methods or default methods
+Note: to create default methods we have to "default" keyword which is a new keyword introduced
+in Java8.
+
+static methods of an interface can be accessed using interface name. we can not override
+static methods of an interface in implementation classes.
+default methods of an interface can be accessed using interface object reference. we can
+override default methods within implementation classes.
+
+Inner interfaces:
+inner interface is nothing but an interface with in another interface. A single class can implement
+both outer and inner interfaces or two different classes also can implement outer and inner interfaces.
+
+
 
 */
 
@@ -65,7 +81,25 @@ public class AbstractionDemo {
 //        i2Obj.methodTwo();
         ((InterfaceTwo) i1Obj).methodTwo();
 
-        
+        // Java8 interfaces
+        Java8Interface.methodTwo(); // static method
+        // create an object reference to the interface
+        Java8Interface j8Obj = new Java8InterfaceImpl();
+        j8Obj.methodOne(); // abstract method
+        j8Obj.methodThree(); // default method
+
+
+        // Inner interfaces
+        Outer oObj = new OuterInnerImpl();
+        oObj.oMethod();
+
+//        Outer.Inner inObj = (Outer.Inner) oObj;
+//        inObj.iMethod();
+//        ((Outer.Inner)oObj).iMethod();
+
+//        Outer.Inner inObj = oObj.methodOne();
+//        inObj.iMethod();
+        oObj.methodOne().iMethod(); // object chaining
 
     }
 }
