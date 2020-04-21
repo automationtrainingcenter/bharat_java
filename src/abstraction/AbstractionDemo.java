@@ -49,7 +49,14 @@ Inner interfaces:
 inner interface is nothing but an interface with in another interface. A single class can implement
 both outer and inner interfaces or two different classes also can implement outer and inner interfaces.
 
-
+Functional Interfaces:
+This is an interface which contains only one abstract method. it does not allow more than one abstract method
+To create these interfaces we have to use FunctionalInterface annotation.
+We can implement these functional interfaces in three ways
+1. using normal java class
+2. using anonymous class (The class which does not contains name)
+3. using lambda expressions
+Note: for lambda expressions refer to FuncInterfaceDemo interface.
 
 */
 
@@ -100,6 +107,28 @@ public class AbstractionDemo {
 //        Outer.Inner inObj = oObj.methodOne();
 //        inObj.iMethod();
         oObj.methodOne().iMethod(); // object chaining
+
+
+        // Functional interfaces implemented by normal java class
+        FuncInterfaceDemo fnor = new FuncInterfaceImpl();
+        fnor.methodOne();
+
+        // Functional interface implemented by anonymous class
+        FuncInterfaceDemo fanon = new FuncInterfaceDemo(){
+
+            @Override
+            public void methodOne() {
+                System.out.println("method one implementation in ANONYMOUS class");
+            }
+        };
+
+        fanon.methodOne();
+
+        // Functional interface implemented by lambda expression
+        FuncInterfaceDemo flam = () -> System.out.println("method one definition using LAMBDA expression");
+        flam.methodOne();
+
+
 
     }
 }
